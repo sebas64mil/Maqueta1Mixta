@@ -1,0 +1,33 @@
+
+body{
+margin: 0%;
+padding: 0%;
+
+}
+
+
+header svg[class="header_logo"] {
+
+    width: 15%;
+    height: 15%;
+    fill: var(--color-Secondary-300);
+
+}
+
+header:has(svg+nav){
+
+background-color: var(--color-primary-900);
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+padding: var(--spacing-s) var(--spacing-3xl);
+}
+
+header nav ul[class="Nav_List"]{
+display: flex;
+flex-direction: row;
+list-style: none;
+column-gap: var(--spacing-s);
+color: var(--color-Secondary-300);
+}

@@ -1,0 +1,53 @@
+:root{
+
+    --color-primary-50: #FFFAFD;
+    --color-primary-100: #FFEEF8;
+    --color-primary-200: #FFE2F3;
+    --color-primary-300: #FFD6EE;
+    --color-primary-400: #FECAE8;
+    --color-primary-500: #DCA0C3;
+    --color-primary-600: #BA7A9F;
+    --color-primary-700: #98597E;
+    --color-primary-800: #763D5E;
+    --color-primary-900: #542641;
+
+    --color-Secondary-50: #F0FFFE;
+    --color-Secondary-100: #CFFFFB;
+    --color-Secondary-200: #AEFFF9;
+    --color-Secondary-300: #8BFAF2;
+    --color-Secondary-400: #66EFE5;
+    --color-Secondary-500: #4ECDC4;
+    --color-Secondary-600: #39ABA3;
+    --color-Secondary-700: #288982;
+    --color-Secondary-800: #196761;
+    --color-Secondary-900: #0E4541;
+
+    --color-Neutral-50: #FFFFFF;
+    --color-Neutral-100: #EBE7E7;
+    --color-Neutral-200: #D6CFCF;
+    --color-Neutral-300: #C2B8B8;
+    --color-Neutral-400: #ADA2A2;
+    --color-Neutral-500: #817676;
+    --color-Neutral-600: #5F5454;
+    --color-Neutral-700: #373030;
+    --color-Neutral-800: #2B2626;
+    --color-Neutral-900: #1E1A1A;
+
+    --spacing-3xs: 0.125rem;
+    --spacing-2xs: 0.25rem;
+    --spacing-xs: 0.5rem;
+    --spacing-s: 0.75rem;
+    --spacing-m: 1rem;
+    --spacing-l: 1.25rem;
+    --spacing-xl: 1.5rem;
+    --spacing-2xl: 2rem;
+    --spacing-3xl: 2.5rem;
+    --spacing-4xl: 3rem;
+    --spacing-5xl: 3.5rem;
+    --spacing-6xl: 4rem;
+    --spacing-7xl: 4.5rem;
+    --spacing-8xl: 5rem;
+    --spacing-9xl: 6rem;
+
+
+}
