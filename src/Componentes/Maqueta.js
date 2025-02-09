@@ -2,11 +2,9 @@ import * as THREE from 'three';
 
 
 
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
@@ -14,16 +12,14 @@ renderer.setAnimationLoop( animate );
 const container = document.getElementById("canvas-container");
 container.appendChild(renderer.domElement);
 
-const controls = new OrbitControls( camera, renderer.domElement );
-const loader = new GLTFLoader();
 
-controls.enablePan= false;
+
 camera.position.z = 5;
 
 
 // Obtener el color del CSS y aplicarlo a la escena
 const rootStyles = getComputedStyle(document.documentElement);
-const backgroundColor = rootStyles.getPropertyValue('--color-primary-400').trim(); 
+const backgroundColor = rootStyles.getPropertyValue('--color-Neutral-50').trim(); 
 
 function hexToRgb(hex) {
     hex = hex.replace("#", "");
@@ -33,16 +29,25 @@ function hexToRgb(hex) {
     return new THREE.Color(r, g, b);
 }
 
-scene.background = hexToRgb(backgroundColor);
+scene.background = hexToRgb("#ffffff");
 
-const geometry = new THREE.BoxGeometry( 1, 1, 1 ); 
-const material = new THREE.MeshBasicMaterial( {color: 0x00ff00} ); 
-const cube = new THREE.Mesh( geometry, material ); 
-scene.add( cube );
+const loader = new FBXLoader();
+loader.load( '/Public/MaquetaCorte1.fbx', function ( object ) {
+    
+    object.scale.set(0.005, 0.005, 0.005);
+    object.position.set(0,-1.5,0);
+    scene.add( object );
+
+} );
 
 
 
 function animate() {
-	renderer.render( scene, camera );
+    camera.position.x = Math.sin(Date.now() * 0.0005) * 5;
+    camera.position.y = Math.cos(Date.now() * 0.0005) * 5;
+    camera.lookAt(scene.position);
+
+    renderer.render(scene, camera);
+
 }
 renderer.setAnimationLoop( animate );

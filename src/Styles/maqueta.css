@@ -1,6 +1,27 @@
 #canvas-container {
-    width: 500px;
-    height: 100px;
-    overflow: hidden; /* Evita que se salga del área */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: black;
+    border-radius: 2px;
+}
 
+#canvas-container h2 {
+    position: absolute;
+    z-index: 100;
+    color: var(--color-Secondary-900);
+    border-color: var(--color-Secondary-900);
+    border-style: none none solid none;
+    border-radius: 5px;
+    margin: var(--spacing-l);
+    padding: var(--spacing-3xs) var(--spacing-xs);
+}
+
+#canvas-container canvas {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Esto coloca el canvas detrás del texto */
 }
