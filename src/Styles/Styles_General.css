@@ -119,4 +119,11 @@
     --body-2-font-size: var(--font-size-xs);
     --body-2-font-weight: var(--font-weight-regular);
     --body-2-line-height: var(--line-height-7);
+
+
+
+    --E0: 0 0 0 0 rgba(27, 28, 29, 0);
+    --E1: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    --E2: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+    --E3: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 7px 10px 0 rgba(0, 0, 0, 0.14), 0 2px 16px 0 rgba(0, 0, 0, 0.12);
 }

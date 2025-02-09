@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/src/Styles/tipografiaStyles.css">
     <link rel="stylesheet" href="/src/Componentes/Maqueta.js">
     <link rel="stylesheet" href="/src/Styles/maqueta.css">
+    <link rel="stylesheet" href="/src/Styles/Tabla.css">
 
     <script type="importmap">
         {
@@ -45,8 +46,15 @@
 
     <div id="canvas-container">
         <h2>Maqueta</h2>
-        <script type="module" src="/src/Componentes/Maqueta.js"></script>      
+        <script type="module" src="/src/Componentes/Maqueta.js"></script>
+        <table id="contenido-tabla">
+            <tr class="row-table">
+            <th class="element-table-heading">Nombre Material</th>
+            <th class="element-table-heading">color</th>
+            </tr>
+
+        </table>
     </div>
-    
+    <script src="/src/Componentes/Tabla.js"></script>
 </body>
 </html>

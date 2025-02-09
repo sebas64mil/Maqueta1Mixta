@@ -16,6 +16,13 @@ container.appendChild(renderer.domElement);
 
 camera.position.z = 9;
 
+function rgbToHex(color) {
+    const r = Math.round(color.r * 255);
+    const g = Math.round(color.g * 255);
+    const b = Math.round(color.b * 255);
+
+    return `#${((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1)}`;
+}
 
 // Obtener el color del CSS y aplicarlo a la escena
 const rootStyles = getComputedStyle(document.documentElement);
@@ -31,6 +38,7 @@ function hexToRgb(hex) {
 
 scene.background = hexToRgb("#ffffff");
 
+let materiales =[]
 const loader = new FBXLoader();
 loader.load( '/Public/MaquetaCorte1.fbx', function ( object ) {
     
@@ -39,15 +47,29 @@ loader.load( '/Public/MaquetaCorte1.fbx', function ( object ) {
 
     object.traverse(function(child) {
         if (child.isMesh) {
+            const material = child.material;
             // Aplica un material básico si no tiene un material
             if (child.material) {
                 child.material = new THREE.MeshBasicMaterial({
                     color: child.material.color || 0x00ff00 // O el color que desees
                 });
             }
+
+
+            if (material.color) {
+                console.log('Color del material (RGB):', material.color);
+                const hexColor = rgbToHex(material.color); // Convertimos a HEX
+                console.log('Color del material (HEX):', hexColor);
+                
+                // Guardamos el nombre y el color en el mismo objeto
+                materiales.push({ name: material.name, color: hexColor });
+            }
         }
     });
 
+
+
+localStorage.setItem('material', JSON.stringify(materiales));
 
     scene.add( object );
 
