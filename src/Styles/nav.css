@@ -21,7 +21,7 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
-padding: var(--spacing-s) var(--spacing-3xl);
+padding: var(--spacing-s) 80px;
 }
 
 header nav ul[class="Nav_List"]{
@@ -32,7 +32,7 @@ column-gap: var(--spacing-m);
 color: var(--color-Secondary-300);
 }
 
-header nav ul li[class="item_nav"]{
+header nav ul li[class="item_nav"]{ 
 
 font-size: var(--body-2-font-size);
 font-weight: var(--body-2-font-weight);
