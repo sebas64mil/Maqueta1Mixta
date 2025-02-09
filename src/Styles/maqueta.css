@@ -1,0 +1,6 @@
+#canvas-container {
+    width: 500px;
+    height: 100px;
+    overflow: hidden; /* Evita que se salga del área */
+
+}
