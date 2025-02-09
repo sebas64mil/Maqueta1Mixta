@@ -14,7 +14,7 @@ container.appendChild(renderer.domElement);
 
 
 
-camera.position.z = 5;
+camera.position.z = 9;
 
 
 // Obtener el color del CSS y aplicarlo a la escena
@@ -36,6 +36,19 @@ loader.load( '/Public/MaquetaCorte1.fbx', function ( object ) {
     
     object.scale.set(0.005, 0.005, 0.005);
     object.position.set(0,-1.5,0);
+
+    object.traverse(function(child) {
+        if (child.isMesh) {
+            // Aplica un material básico si no tiene un material
+            if (child.material) {
+                child.material = new THREE.MeshBasicMaterial({
+                    color: child.material.color || 0x00ff00 // O el color que desees
+                });
+            }
+        }
+    });
+
+
     scene.add( object );
 
 } );
@@ -45,6 +58,7 @@ loader.load( '/Public/MaquetaCorte1.fbx', function ( object ) {
 function animate() {
     camera.position.x = Math.sin(Date.now() * 0.0005) * 5;
     camera.position.y = Math.cos(Date.now() * 0.0005) * 5;
+    camera.position.z = Math.cos(Date.now() * 0.0005) * 10;
     camera.lookAt(scene.position);
 
     renderer.render(scene, camera);
