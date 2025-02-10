@@ -2,33 +2,46 @@ table{
 
     position:  absolute;
     z-index: 50;
-    bottom: 5%;
-    left: 5%;
-    border-style: solid;
-    border-radius: var(--spacing-xs);
-    background-color: var(--color-Neutral-900);
+    bottom: 2%;
+    left: 4%;
     box-shadow: var(--E1);
     width: 20%;
-
     margin: 0%;
+    background-color: var(--color-Secondary-900);
+    border-radius: var(--spacing-s);
+    overflow: hidden;
 }
 
 table tr{
-
-border-style: solid;
-border-color: var(--color-Neutral-900);
-border-radius: 2px;
-background-color: var(--color-primary-50);
-
-
+    background-color: var(--color-primary-50);
 }
 
 table tr td{
-    padding: var(--spacing-3xs) var(--spacing-1xs);
+    padding: var(--spacing-3xs) ;
+
     text-align: center;
     word-wrap: break-word;
+    font-size: var(--body-2-font-size);
+    font-weight: var(--body-2-font-weight);
+    color: var(--color-Secondary-900);
 
 }
 
 
+table tr th{
+
+    background-color: var(--color-primary-900);
+    color: var(--color-Secondary-50);
+    
+
+}
+
+
+
+
+
+table tr :hover{
+    background-color: var(--color-primary-800);
+    color: var(--color-Secondary-50);
+}
 

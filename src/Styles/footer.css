@@ -1,0 +1,44 @@
+footer .footer_logo{
+
+    width: 150px;
+    height: fit-content;
+    padding: auto;
+    fill: var(--color-Secondary-100);
+
+}
+
+footer div[class="author"]{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    row-gap: 5px;
+    margin: auto;
+    height: 20%;
+}
+
+
+footer{
+    margin:  auto; 
+    text-align: center; 
+    padding: 10px var(--spacing-xl) 10px var(--spacing-xl);
+    height: fit-content;
+    background-color: var(--color-primary-900);
+
+}
+
+.author hr {
+    width: 100%; /* O un ancho específico */
+    height: 2px; /* O el grosor que desees */
+    background-color: var(--color-Secondary-100); /* Asegurar color visible */
+    border: none; /* Evitar bordes predeterminados */
+    margin: 10px 0; /* Dar espacio arriba y abajo */
+}
+
+div[class="author"] h5{
+    align-self: flex-start;
+    color: var(--color-Secondary-100);
+    margin: auto 0px;
+
+}
