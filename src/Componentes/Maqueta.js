@@ -81,34 +81,36 @@ const dist_camera=7;
 
 function back() {
     camera.position.set(car.position.x , car.position.y+1, car.position.z - dist_camera );
-
-    renderer.render(scene, camera); 
-    
+    car.rotation.set(0,THREE.MathUtils.degToRad(0),0);
+    renderer.render(scene, camera);    
 }
 
 function front() {
     camera.position.set(car.position.x , car.position.y+1, car.position.z + dist_camera );
-
+    car.rotation.set(0,THREE.MathUtils.degToRad(0),0);
     renderer.render(scene, camera); 
 }
 
 function right() {
     camera.position.set(car.position.x + dist_camera, car.position.y+1, car.position.z );
+    car.rotation.set(0,THREE.MathUtils.degToRad(0),0);
     renderer.render(scene, camera); 
 }
 
 function left() {
     camera.position.set(car.position.x - dist_camera, car.position.y+1, car.position.z );
-
-    renderer.render(scene, camera); 
+    car.rotation.set(0,THREE.MathUtils.degToRad(0),0);
+    renderer.render(scene, camera);
+     
 }
 function down() {
     camera.position.set(car.position.x, car.position.y - dist_camera, car.position.z);
-    renderer.render(scene, camera); 
-
+    car.rotation.set(0,THREE.MathUtils.degToRad(0),0);
+    renderer.render(scene, camera);
 }
 function up() {
-    camera.position.set(car.position.x, car.position.y + dist_camera, car.position.z);
+    camera.position.set(car.position.x, car.position.y + dist_camera+1, car.position.z);
+    car.rotation.set(0,THREE.MathUtils.degToRad(180),0);
     renderer.render(scene, camera); 
 
 }
