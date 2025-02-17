@@ -1,12 +1,9 @@
 table{
 
-    position:  absolute;
-    z-index: 50;
-    bottom: 2%;
-    left: 4%;
+
     box-shadow: var(--E1);
     width: 20%;
-    margin: 0%;
+    margin: auto;
     background-color: var(--color-Secondary-900);
     border-radius: var(--spacing-s);
     overflow: hidden;

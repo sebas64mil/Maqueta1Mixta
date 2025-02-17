@@ -39,6 +39,7 @@ function hexToRgb(hex) {
 scene.background = hexToRgb("#ffffff");
 
 let materiales =[]
+let car = null
 const loader = new FBXLoader();
 loader.load( '/Public/MaquetaCorte1.fbx', function ( object ) {
     
@@ -72,15 +73,59 @@ loader.load( '/Public/MaquetaCorte1.fbx', function ( object ) {
 localStorage.setItem('material', JSON.stringify(materiales));
 
     scene.add( object );
-
+    car = object
 } );
+
+const dist_camera=7;
+
+
+function back() {
+    camera.position.set(car.position.x , car.position.y+1, car.position.z - dist_camera );
+
+    renderer.render(scene, camera); 
+    
+}
+
+function front() {
+    camera.position.set(car.position.x , car.position.y+1, car.position.z + dist_camera );
+
+    renderer.render(scene, camera); 
+}
+
+function right() {
+    camera.position.set(car.position.x + dist_camera, car.position.y+1, car.position.z );
+    renderer.render(scene, camera); 
+}
+
+function left() {
+    camera.position.set(car.position.x - dist_camera, car.position.y+1, car.position.z );
+
+    renderer.render(scene, camera); 
+}
+function down() {
+    camera.position.set(car.position.x, car.position.y - dist_camera, car.position.z);
+    renderer.render(scene, camera); 
+
+}
+function up() {
+    camera.position.set(car.position.x, car.position.y + dist_camera, car.position.z);
+    renderer.render(scene, camera); 
+
+}
+
+
+
+document.getElementById("Back").addEventListener('click',back);
+document.getElementById("Front").addEventListener('click',front);
+document.getElementById("Right").addEventListener('click',right);
+document.getElementById("Left").addEventListener('click',left);
+document.getElementById("Down").addEventListener('click',down);
+document.getElementById("Up").addEventListener('click',up);
 
 
 
 function animate() {
-    camera.position.x = Math.sin(Date.now() * 0.0005) * 5;
-    camera.position.y = Math.cos(Date.now() * 0.0005) * 5;
-    camera.position.z = Math.cos(Date.now() * 0.0005) * 10;
+
     camera.lookAt(scene.position);
 
     renderer.render(scene, camera);

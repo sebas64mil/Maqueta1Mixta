@@ -25,6 +25,7 @@ footer{
     padding: 10px var(--spacing-xl) 10px var(--spacing-xl);
     height: fit-content;
     background-color: var(--color-primary-900);
+    margin-top: var(--spacing-m);
 
 }
 
