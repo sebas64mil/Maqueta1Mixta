@@ -9,19 +9,11 @@
     <link rel="stylesheet" href="/src/Styles/Styles_General.css ">
     <link rel="stylesheet" href="/src/Styles/banner.css ">
     <link rel="stylesheet" href="/src/Styles/tipografiaStyles.css">
-    <link rel="stylesheet" href="/src/Componentes/Maqueta.js">
-    <link rel="stylesheet" href="/src/Styles/maqueta.css">
-    <link rel="stylesheet" href="/src/Styles/Tabla.css">
     <link rel="stylesheet" href="/src/Styles/footer.css">
+    <link rel="stylesheet" href="/src/Styles/About_us.css">
+    <link rel="stylesheet" href="/src/Styles/card.css">
 
-    <script type="importmap">
-        {
-            "imports": {
-            "three": "https://cdn.jsdelivr.net/npm/three@v0.149.0/build/three.module.js",
-            "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.149.0/examples/jsm/"
-        }
-        }
-    </script>
+
 </head>
 <body>
     <header class="header_menu">
@@ -31,9 +23,11 @@
 
         <nav class="header_nav">
             <ul class="Nav_List">
-                <li class="item_nav">INICIO</li>
-                <li class="item_nav">TABLAS</li>
-                <li class="item_nav">FINAL</li>
+                <li class="item_nav">Inicio</li>
+                <li class="item_nav">Calculadora</li>
+                <li class="item_nav">documentación</li>
+                <li class="item_nav">precios</li>
+
             </ul>
         </nav>
     </header>
@@ -45,33 +39,38 @@
         </div>
     </header>
 
-    <div id="canvas-container">
-        <h2>Maqueta</h2>
-        <div class="Column_one">
-            <button type="button" class="button" id="Back">Back</button>
-            <button type="button" class="button" id="Front">Front</button>
-            <button type="button" class="button" id="Right">Right</button>
+
+    <section class="About_us">
+        <h2>¿QÚE ES MIXCAR?</h2>
+        <p class="body2">Nuestro sitio está diseñado para ayudar a estudiantes de realidad mixta, ofreciéndoles un espacio donde puedan acceder a <strong class="Negrilla">documentación clave, explorar ejemplos prácticos y conocer los costos estimados de proyectos en esta área</strong>. Además, contamos con una herramienta especializada que permite calcular un dato esencial dentro del desarrollo de estos proyectos, facilitando así la planificación y ejecución de sus ideas.</p>
+        <div class="image_aboutus"></div>
+    </section>
+
+
+    <section class="tematic">
+        <h2>Tematicas</h2>
+<div class="contain_cards">
+    <div class="card_tematic">
+        <div class="image_tematics"></div>
+        <h4>Mecanica</h4>
+        <p>La mecánica es la rama de la física que estudia el movimiento de los cuerpos y las fuerzas que lo afectan. Se aplica en ingeniería, simulaciones y realidad mixta.</p>
+        </div>
+        <!-- cambio de tarjeta-->
+    <div class="card_tematic">
+        <div class="image_tematics"></div>
+        <h4>Circuitos</h4>
+        <p>Los circuitos son la base de la electrónica, permitiendo el flujo de corriente a través de componentes como resistencias, capacitores y transistores. Son esenciales en dispositivos tecnológicos, desde computadoras hasta sistemas de automatización.</p>
+        </div>
+        <!-- cambio de tarjeta-->
+
+    <div class="card_tematic">
+        <div class="image_tematics"></div>
+        <h4>Modelos de previsualizacion</h4>
+        <p>Los modelos de previsualización permiten ver una representación anticipada de un diseño o proyecto antes de su implementación final. Son esenciales en áreas como el diseño 3D, UX/UI y simulaciones, facilitando ajustes y mejoras.</p>
         </div>
 
-        <div class="Column_two">
-            <button type="button" class="button" id="Left">Left</button>
-            <button type="button" class="button " id="Down">Down</button>
-            <button type="button" class="button" id="Up">Up</button>
-        </div>
-        <script type="module" src="/src/Componentes/Maqueta.js"></script>
-        
-
-
-    </div>
-
-    <table id="contenido-tabla">
-        <tr class="row-table">
-        <th class="element-table-heading">NOMBRE MATERIAL</th>
-        <th class="element-table-heading">Color</th>
-        </tr>
-
-    </table>
-    <script src="/src/Componentes/Tabla.js"></script>
+</div>
+    </section>
     <footer>
 
         <svg xmlns="http://www.w3.org/2000/svg" class="footer_logo" viewBox="0 0 695 167" > 

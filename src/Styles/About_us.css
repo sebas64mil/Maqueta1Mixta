@@ -1,0 +1,47 @@
+.About_us:has(h2+p+div){
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+padding: 0% 80px;
+margin: 5% 0%;
+
+
+}
+.About_us p{
+padding: 0% 20%;
+text-align: center;
+color: var(--color-Neutral-900);
+text-align: justify;
+
+
+}
+.About_us h2{
+color: var(--color-primary-900);
+margin: 10px;
+
+}
+
+p .Negrilla{
+font-weight: var(--font-weight-semibold);}
+
+
+section .image_aboutus{
+min-height: 200px;
+min-width: 200px;
+background-image: url(/Public/Image_flash.jpg);
+background-position: -330px -800px;
+border-radius: 100%;
+position: relative;
+overflow: hidden;
+}
+
+section .image_aboutus::after{
+content: "";
+position: absolute;
+background-color: var(--color-Secondary-900);
+opacity: 0.2;
+z-index: 20;
+width: 100%;
+height: 100%;
+    }

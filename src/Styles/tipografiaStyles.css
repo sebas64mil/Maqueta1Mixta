@@ -39,3 +39,8 @@ line-height: var(--heading-6-line-height);
     font-weight: var(--body-2-font-weight);
     line-height: var(--body-2-line-height);
 }
+
+*::selection{
+    background-color: var(--color-Secondary-900);
+    color: var(--color-primary-100);
+}
