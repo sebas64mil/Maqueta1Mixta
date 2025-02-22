@@ -3,6 +3,7 @@ body{
 margin: 0%;
 padding: 0%;
 font-family: var(--font-family-montserrat);
+position: relative;
 }
 
 
@@ -23,6 +24,9 @@ flex-direction: row;
 align-items: center;
 justify-content: space-between;
 padding: var(--spacing-s) 80px;
+position: sticky;
+z-index: 200;
+top: 0px;
 }
 
 header nav ul[class="Nav_List"]{
@@ -41,11 +45,8 @@ font-weight: var(--body-2-font-weight);
 line-height: var(--body-2-line-height);
 }
 
-header[class="header_menu"]{
-
-    position: sticky;
-    z-index: 200;
-    height:min-content;
+.header_nav{
+    display: block;
 }
 
 header nav ul li[class="item_nav"]:hover{
