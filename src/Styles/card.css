@@ -8,7 +8,6 @@ box-shadow: var(--E1);
 justify-content: flex-start;
 overflow: hidden;
 margin: var(--spacing-xs);
-background-color: var(--color-primary-50);
 flex-grow: 1;
 
 }
@@ -27,12 +26,12 @@ text-align: center;
 .card_tematic h4{
 
     color: var(--color-Secondary-900);
-    margin: 3% 2%;
+    margin: 4%;
 
 }
 .card_tematic p{
 
-    margin: 0% 10% 5% 2%;
+    margin: 0% 12% 4% 4%;
     color: var(--color-Neutral-900);
 }
 .contain_cards{
@@ -42,6 +41,7 @@ flex-direction: row;
 align-items: flex-end;
 justify-content: space-evenly;
 flex-wrap: wrap;
+
 
 }
 .tematic h2{

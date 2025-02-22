@@ -1,0 +1,32 @@
+.Whymix:has(img+div[class="info_mix"]){
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: var(--spacing-2xl) var(--spacing-6xl) ;
+align-items: center;
+margin: 0%;
+background-color: var(--color-primary-900);
+
+}
+.Whymix .info_mix{
+
+width: 52%;
+text-align: right;
+color: var(--color-Secondary-100);
+
+}
+
+.info_mix h3{
+    margin: 0%;
+}
+
+
+
+
+.Whymix img[src="/Public/image_Mixta.jpg"]{
+width: 450px;
+border-radius: 8px;
+overflow: hidden;
+}
+
