@@ -7,6 +7,8 @@ padding: var(--spacing-2xl) var(--spacing-6xl) ;
 align-items: center;
 margin: 0%;
 background-color: var(--color-primary-900);
+flex-wrap: wrap;
+width: fit-content;
 
 }
 .Whymix .info_mix{
@@ -21,12 +23,46 @@ color: var(--color-Secondary-100);
     margin: 0%;
 }
 
-
-
-
 .Whymix img[src="/Public/image_Mixta.jpg"]{
-width: 450px;
+min-width:450px;
+max-width:451px;
 border-radius: 8px;
 overflow: hidden;
+margin: var(--spacing-2xs);
 }
 
+@media screen and (max-width:1100px) {
+    .Whymix img[src="/Public/image_Mixta.jpg"]{
+        min-width:350px;
+        max-width:451px;
+
+        }
+        
+    .Whymix:has(img+div[class="info_mix"]){
+        padding: var(--spacing-m) var(--spacing-xl) ;
+        flex-direction: column;
+        }
+        
+    .info_mix h3{
+    text-align: center;
+    }
+    .Whymix .info_mix{
+    width: 70% ;
+    text-align: justify;
+    }
+    }
+
+    
+@media screen and (max-width:661px) {
+    .Whymix img[src="/Public/image_Mixta.jpg"]{
+        min-width:100px;
+        max-width:300px;
+        }
+        
+    .Whymix:has(img+div[class="info_mix"]){
+
+        justify-content: center;
+        padding: var(--spacing-m) var(--spacing-2xs) ;
+
+        }
+    }

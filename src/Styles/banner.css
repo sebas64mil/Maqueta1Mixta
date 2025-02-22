@@ -35,7 +35,7 @@ header img[class="banner_header"] {
 header[class="banner"] .content {
     display: flex;
     flex-direction: column; 
-    align-items: center;    
+    align-items: flex-start;  
     justify-content: center;
     z-index: 30;
     color: var(--color-Secondary-100);
@@ -43,11 +43,49 @@ header[class="banner"] .content {
     margin: 0px 80px;
 }
 
-header[class="banner"] h1, header[class="banner"] p {
+header[class="banner"] h1{
+    margin: 0%;
+    max-width: 90%;
+    padding: var(--spacing-3xs); 
+    word-wrap: break-word;
+
+}
+
+header[class="banner"] p {
+
     margin: 0;
-    max-width: 700px;
+    max-width: 770px;
     padding: var(--spacing-3xs); 
     word-wrap: break-word;
 }
 
+@media screen and (max-width: 1024px) {
+    header[class="banner"] .content {
+        margin: 0px 40px;
+    }
+}
 
+
+@media screen and (max-width: 661px) {
+    header[class="banner"] .content {
+        margin: 0px 5px;
+        flex-direction: column;
+    }
+    header[class="banner"] h1{
+        margin: 0%;
+        max-width: 90%;
+        padding: var(--spacing-3xs); 
+        word-wrap: break-word;
+        font-size: var(--heading-2-font-size);
+        font-weight: var(--heading-2-font-weight);
+        line-height: var(--heading-2-line-height);
+        
+    }
+    header[class="banner"] p {
+
+        margin: 0;
+        max-width: 570px;
+        padding: var(--spacing-3xs); 
+        word-wrap: break-word;
+    }
+}

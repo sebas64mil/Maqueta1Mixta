@@ -6,7 +6,7 @@ align-items: center;
 max-width: 300px;
 min-width: 250px;
 padding: var(--spacing-m);
-margin: var(--spacing-m) 0%;
+margin: var(--spacing-m) var(--spacing-xs);
 flex-grow: 1;
 border-radius: var(--spacing-xs);
 box-shadow: var(--E1);

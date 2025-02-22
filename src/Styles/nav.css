@@ -8,7 +8,8 @@ font-family: var(--font-family-montserrat);
 
 header svg[class="header_logo"] {
 
-    width: 150px;
+    min-width: 150px;
+    max-width: 151px;
     height: fit-content;
     fill: var(--color-Secondary-300);
 
@@ -30,6 +31,7 @@ flex-direction: row;
 list-style: none;
 column-gap: var(--spacing-m);
 color: var(--color-Secondary-300);
+margin: var(--spacing-xs) 0%;
 }
 
 header nav ul li[class="item_nav"]{ 
@@ -50,3 +52,29 @@ header nav ul li[class="item_nav"]:hover{
 
     color: var(--color-primary-700);
     }
+
+header .header_menu{
+    fill: var(--color-Secondary-300);
+    width: 36px;
+    display: none;
+}
+
+
+ @media screen and (max-width:1024px) {
+    header:has(svg+nav){
+        padding: var(--spacing-s) 40px;
+    }
+ }
+@media screen and (max-width:660px) {
+    .header_nav{
+    display: none;
+
+    }
+    header:has(svg+nav){
+
+        padding: var(--spacing-s) 20px;
+    }
+    header .header_menu{
+        display: block;
+    }
+}

@@ -7,7 +7,7 @@ align-items: flex-start;
 box-shadow: var(--E1);
 justify-content: flex-start;
 overflow: hidden;
-margin: var(--spacing-xs);
+margin: var(--spacing-xl) var(--spacing-xs);
 flex-grow: 1;
 
 }
@@ -26,7 +26,7 @@ text-align: center;
 .card_tematic h4{
 
     color: var(--color-Secondary-900);
-    margin: 4%;
+    margin: var(--spacing-xs);
 
 }
 .card_tematic p{
@@ -47,8 +47,29 @@ flex-wrap: wrap;
 .tematic h2{
     text-align: center;
     color: var(--color-primary-900);
+    
+}
+
+.tematic{
+    padding: var(--spacing-4xl) 80px;
+
 }
 
 .contain_cards .card_tematic:nth-child(2) .image_tematics{ background-image: url(/Public/circutos.jpg); }
 .contain_cards .card_tematic:last-child .image_tematics{ background-image: url(/Public/ModeloPrevisualiazion.jpg); }
 
+@media screen and (max-width:1024px) {
+    .tematic{
+        padding: var(--spacing-4xl) 40px;
+    
+    }
+}
+@media screen and (max-width:661px) {
+    .tematic{
+        padding: var(--spacing-4xl) 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
