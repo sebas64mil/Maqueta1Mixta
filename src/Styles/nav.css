@@ -61,6 +61,16 @@ header .header_menu{
 }
 
 
+nav ul li a{
+    color: var(--color-Secondary-300);
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: var(--color-primary-700);
+    text-decoration: none;
+}
+
  @media screen and (max-width:1024px) {
     header:has(svg+nav){
         padding: var(--spacing-s) 40px;

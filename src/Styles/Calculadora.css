@@ -1,0 +1,24 @@
+.section_auto .auto canvas{
+
+    width: 100% !important ;
+    height: 100% !important ;
+}
+
+.section_auto {
+display: grid;
+grid-template-columns: 3fr 1fr;
+}
+
+.section_auto .data_auto{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.data_auto h4{
+    margin: 0%;
+    text-align: center;
+}
+
+
