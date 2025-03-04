@@ -14,11 +14,39 @@ grid-template-columns: 3fr 1fr;
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: var(--color-primary-50);
 }
 
 .data_auto h4{
     margin: 0%;
     text-align: center;
+    color: var(--color-Secondary-900);
 }
 
+.data_auto .acordion_data:has(h6 + svg){
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    justify-content: space-around;
+    color: var(--color-Secondary-900);
+    box-shadow: var(--E1);
+    margin-top: 12px;
+    
+}
+
+.data_auto .acordion_data:hover{
+    background-color: var(--color-Secondary-900);
+    color: var(--color-primary-100);
+    fill: var(--color-primary-100);
+}
+
+.acordion_data .acordion_icon{
+
+width: 36px;
+height: 36px;
+fill: var(--color-Secondary-900);
+
+}
 
