@@ -23,30 +23,124 @@ grid-template-columns: 3fr 1fr;
     color: var(--color-Secondary-900);
 }
 
-.data_auto .acordion_data:has(h6 + svg){
+.data_auto{
+
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+
+}
+
+
+details > summary > i > svg{
+width: 30px ;
+height: 30px ;
+}
+
+summary > i {
 
     display: flex;
+    flex-direction: row;
     align-items: center;
-    width: 100%;
-    height: 50px;
-    justify-content: space-around;
+}
+
+details > summary{
+
+    display: flex;
+    flex-direction: row;
+
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% var(--spacing-s);
     color: var(--color-Secondary-900);
-    box-shadow: var(--E1);
-    margin-top: 12px;
+
+}
+
+details[open] svg{
+
+    transform: rotate(90deg);
+
+}
+
+
+details svg{
+    fill: var(--color-Secondary-50);
+
+}
+
+details:has(span + i){ 
+ width: 100%;
+ box-shadow: var(--E1);
+ margin-top: var(--spacing-xs);
+ 
+
+}
+
+
+summary > span > h6{
+
+    margin: 0%;
+}
+.title_acordion{
+
+    background-color: var(--color-primary-900);
+    color: var(--color-Secondary-50);
+
+}
+/*
+
+form
+
+*/
+
+.info_acordion {
+
+    padding: var(--spacing-s) 0%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info_acordion  input[type="number"]{
+
+margin: var(--spacing-2xs) 0%;
+width:25px ;
+}
+
+.sectionData input,.sectionData datalist[id="unidades"]{
+    border-radius: 8px;
+    border-color: var(--color-primary-900);
+    border-style: solid;
+    min-width: 50px;
+    margin: 0% var(--spacing-2xs);
+}
+
+.info_acordion{
+    padding:  0% var(--spacing-s);
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionData{
+    margin: var(--spacing-xs) 0%;
+    display: flex;
+}
+
+.info_acordion button[type="button"]{
+    border-radius: 4px;
+    overflow: hidden;
+    margin: var(--spacing-xs) 0%;
+    align-self: center;
     
 }
-
-.data_auto .acordion_data:hover{
-    background-color: var(--color-Secondary-900);
-    color: var(--color-primary-100);
-    fill: var(--color-primary-100);
+.sectionData label{
+    margin-right: 4px;
 }
 
-.acordion_data .acordion_icon{
 
-width: 36px;
-height: 36px;
-fill: var(--color-Secondary-900);
+/* 
+hover
 
-}
+*/
+
+
 
