@@ -1,3 +1,4 @@
+
 .section_auto .auto canvas{
 
     width: 100% !important ;
@@ -26,9 +27,9 @@ grid-template-columns: 3fr 1fr;
 .data_auto{
 
     overflow-y: scroll; 
-    overflow-x: hidden; 
-
+    max-height:526px;
 }
+
 
 
 details > summary > i > svg{
@@ -59,12 +60,13 @@ details > summary{
 details[open] svg{
 
     transform: rotate(90deg);
-
+ 
 }
 
 
 details svg{
     fill: var(--color-Secondary-50);
+    transition: transform 0.25s ease-in;
 
 }
 
@@ -106,7 +108,7 @@ margin: var(--spacing-2xs) 0%;
 width:25px ;
 }
 
-.sectionData input,.sectionData datalist[id="unidades"]{
+.sectionData input,.sectionData datalist[id="unidades"],.sectionData datalist[id="Planetas"]{
     border-radius: 8px;
     border-color: var(--color-primary-900);
     border-style: solid;
@@ -123,24 +125,44 @@ width:25px ;
 .sectionData{
     margin: var(--spacing-xs) 0%;
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 .info_acordion button[type="button"]{
-    border-radius: 4px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: var(--color-Secondary-50);
     overflow: hidden;
     margin: var(--spacing-xs) 0%;
     align-self: center;
-    
+    background-color: var(--color-primary-800);
+    color: var(--color-Secondary-50);
 }
 .sectionData label{
     margin-right: 4px;
 }
 
+.sectionData:has(label+input+span) span{
+    margin-left: 4px;
+} 
 
 /* 
 hover
 
 */
 
+.info_acordion button[type="button"]:hover{
+background-color: var(--color-primary-900);
+}
 
+
+/*
+media queris
+*/
+
+@media screen and( max-width:660px){
+
+
+}
 

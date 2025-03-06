@@ -58,7 +58,7 @@
             <i>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 55" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21.2965 38.2869C20.8668 37.8572 20.6255 37.2744 20.6255 36.6667C20.6255 36.059 20.8668 35.4763 21.2965 35.0465L28.8429 27.5L21.2965 19.9536C20.879 19.5214 20.648 18.9425 20.6533 18.3416C20.6585 17.7408 20.8995 17.166 21.3244 16.7411C21.7493 16.3162 22.3241 16.0752 22.9249 16.07C23.5258 16.0647 24.1047 16.2957 24.5369 16.7132L33.7035 25.8798C34.1332 26.3096 34.3745 26.8924 34.3745 27.5C34.3745 28.1077 34.1332 28.6905 33.7035 29.1202L24.5369 38.2869C24.1071 38.7165 23.5243 38.9579 22.9167 38.9579C22.309 38.9579 21.7262 38.7165 21.2965 38.2869Z" />
-              </svg>
+                </svg>
             </i>
         </summary>
         <form class="info_acordion">
@@ -66,10 +66,9 @@
     <div class="sectionData">
 
         <label class="body2" for="MasaAuto">Masa_auto:</label>
-        <input type="number" name="dato" id="MasaAuto" name="MasaAuto" value="10
-        ">
-        <input list="unidades" name="unidades"  placeholder="Unidades">
-    <datalist id="unidades">
+        <input type="number" name="dato" id="MasaAuto" name="MasaAuto" value="10">
+        <input list="unidades_masa" name="unidades"  placeholder="Unidades" id="MasaAuto">
+    <datalist id="unidades_masa">
     <option value="mg">
     <option value="cg">
     <option value="g">
@@ -81,19 +80,32 @@
     </div>
     <div class="sectionData">
 
-        <label class="body2" for="MasaAuto">coeficiente_Friccion:</label>
-        <input type="number" name="dato" id="MasaAuto" name="MasaAuto" value="10
-        ">
-        <input list="unidades" name="unidades"  placeholder="Unidades">
-    <datalist id="unidades">
-    <option value="mg">
-    <option value="cg">
-    <option value="g">
-    <option value="dg">
-    <option value="hg">
-    <option value="kg">
-    </datalist>
+        <label class="body2" for="CoeficienteFriccion">coeficiente_Friccion:</label>
+        <input type="number" name="dato" id="CoeficienteFriccion" name="MasaAuto" value="10">
 
+    </div>
+
+    <div class="sectionData">
+
+        <label class="body2" for="Planetas">Gravedad:</label>
+        <input list="PlanetasList" name="Planetas" placeholder="planetas" id="Planetas">
+        <span class="body2">m/s<sup>2</sup></span>
+        <datalist id="PlanetasList">
+            <option value="Mercurio">
+            <option value="Venus">
+            <option value="Tierra">
+            <option value="Marte">
+            <option value="Júpiter">
+            <option value="Saturno">
+        </datalist>
+
+    </div>
+
+    <div class="sectionData">
+
+        <label class="body2" for="FuerzaMotor">Fuerza Motor:</label>
+        <input type="number" name="dato" id="FuerzaMotor" name="MasaAuto" value="10">
+        <span class="body2">kg*m/s<sup>2</sup></span>
     </div>
 
 
@@ -107,44 +119,86 @@
             <i>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 55" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21.2965 38.2869C20.8668 37.8572 20.6255 37.2744 20.6255 36.6667C20.6255 36.059 20.8668 35.4763 21.2965 35.0465L28.8429 27.5L21.2965 19.9536C20.879 19.5214 20.648 18.9425 20.6533 18.3416C20.6585 17.7408 20.8995 17.166 21.3244 16.7411C21.7493 16.3162 22.3241 16.0752 22.9249 16.07C23.5258 16.0647 24.1047 16.2957 24.5369 16.7132L33.7035 25.8798C34.1332 26.3096 34.3745 26.8924 34.3745 27.5C34.3745 28.1077 34.1332 28.6905 33.7035 29.1202L24.5369 38.2869C24.1071 38.7165 23.5243 38.9579 22.9167 38.9579C22.309 38.9579 21.7262 38.7165 21.2965 38.2869Z" />
-              </svg>
+                </svg>
             </i>
         </summary>
         <form class="info_acordion">
         
-    <div class="sectionData">
+            <div class="sectionData">
 
-        <label class="body2" for="MasaAuto">Masa_auto:</label>
-        <input type="number" name="dato" id="MasaAuto" name="MasaAuto" value="10
-        ">
-        <input list="unidades" name="unidades"  placeholder="Unidades">
-    <datalist id="unidades">
-    <option value="mg">
-    <option value="cg">
-    <option value="g">
-    <option value="dg">
-    <option value="hg">
-    <option value="kg">
-    </datalist>
 
-    </div>
-    <div class="sectionData">
+                <label class="body2" for="MasaAuto">Masa_auto:</label>
+                <input type="number" name="dato" id="MasaAuto" name="MasaAuto" value="10">
+                <input list="unidades_masa" name="unidades"  placeholder="Unidades" id="MasaAuto">
+            <datalist id="unidades_masa">
+            <option value="mg">
+            <option value="cg">
+            <option value="g">
+            <option value="dg">
+            <option value="hg">
+            <option value="kg">
+            </datalist>
+        
+            </div>
+            <div class="sectionData">
+        
+                <label class="body2" for="CoeficienteFriccion">coeficiente_Friccion:</label>
+                <input type="number" name="dato" id="CoeficienteFriccion" name="MasaAuto" value="10">
+        
+            </div>
+        
+            <div class="sectionData">
+        
+                <label class="body2" for="Planetas">Gravedad:</label>
+                <input list="PlanetasList" name="Planetas" placeholder="planetas" id="Planetas">
+                <span class="body2">m/s<sup>2</sup></span>
+                <datalist id="PlanetasList">
+                    <option value="Mercurio">
+                    <option value="Venus">
+                    <option value="Tierra">
+                    <option value="Marte">
+                    <option value="Júpiter">
+                    <option value="Saturno">
+                </datalist>
+                
+        
+            </div>
 
-        <label class="body2" for="MasaAuto">Masa_auto:</label>
-        <input type="number" name="dato" id="MasaAuto" name="MasaAuto" value="10
-        ">
-        <input list="unidades" name="unidades"  placeholder="Unidades">
-    <datalist id="unidades">
-    <option value="mg">
-    <option value="cg">
-    <option value="g">
-    <option value="dg">
-    <option value="hg">
-    <option value="kg">
-    </datalist>
+            <div class="sectionData">
 
-    </div>
+                <label class="body2" for="Torquemotor">Torque_motor:</label>
+                <input type="number" name="dato" id="Torquemotor" name="Torquemotor" value="10">
+                <input list="unidades_torque" name="unidades"  placeholder="Unidades" id="Torquemotor">
+            <datalist id="unidades_torque">
+                <option value="dyn_cm">
+                <option value="gf_cm">
+                <option value="oz_in">
+                <option value="lb_in">
+                <option value="kg_cm">
+                <option value="gf_m">
+                <option value="N_m">
+                <option value="lb_ft">
+                <option value="kg_m">
+            </datalist>
+        
+            </div>
 
+            <div class="sectionData">
+
+                <label class="body2" for="Radio1">radioDelEngranaje1:</label>
+                <input type="number" name="dato" id="Radio1" name="Radio1" value="10">
+                <input list="unidades_radioEngrannaje" name="unidades"  placeholder="Unidades" id="Radio1">
+                <datalist id="unidades_radioEngrannaje">
+                    <option value="mm">
+                    <option value="cm">
+                    <option value="dm">
+                    <option value="m">
+                    <option value="dam">
+                    <option value="hm">
+                    <option value="km">
+            </datalist>
+        
+            </div>
 
     <button class="body1"  type="button">calcular</button>
         </form>
