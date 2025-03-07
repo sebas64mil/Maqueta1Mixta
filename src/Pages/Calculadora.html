@@ -89,7 +89,7 @@
 
         <label class="body2" for="Planetas">Gravedad:</label>
         <input list="PlanetasList" name="Planetas" placeholder="planetas" id="Planetas">
-        <span class="body2">m/s<sup>2</sup></span>
+        <span class="body2" id="gravedadPlaneta">m/s<sup>2</sup></span>
         <datalist id="PlanetasList">
             <option value="Mercurio">
             <option value="Venus">
@@ -107,6 +107,8 @@
         <input type="number" id="FuerzaMotor" name="FuerzaMotor" value="10">
         <span class="body2">kg*m/s<sup>2</sup></span>
     </div>
+
+    <p id="ResultadoAceleracion" class="body2"></p>
 
 
     <button class="body1" id="mostrarUnidades1" type="button">calcular</button>
@@ -151,9 +153,9 @@
         
             <div class="sectionData">
         
-                <label class="body2" for="Planetas">Gravedad:</label>
-                <input list="PlanetasList" name="Planetas" placeholder="planetas" id="Planetas">
-                <span class="body2">m/s<sup>2</sup></span>
+                <label class="body2" for="Planetas2">Gravedad:</label>
+                <input list="PlanetasList" name="Planetas" placeholder="planetas" id="Planetas2">
+                <span class="body2" id="gravedadPlaneta2">m/s<sup>2</sup></span>
                 <datalist id="PlanetasList">
                     <option value="Mercurio">
                     <option value="Venus">
@@ -170,7 +172,7 @@
 
                 <label class="body2" for="Torquemotor">Torque_motor:</label>
                 <input type="number" name="dato" id="Torquemotor" name="Torquemotor" value="10">
-                <input list="unidades_torque" name="unidades"  placeholder="Unidades" id="Torquemotor">
+                <input list="unidades_torque" name="unidades"  placeholder="Unidades" id="Torquemotor_Unidades">
             <datalist id="unidades_torque">
                 <option value="dyn_cm">
                 <option value="gf_cm">
@@ -189,7 +191,7 @@
 
                 <label class="body2" for="Radio1">radioDelEngranaje1:</label>
                 <input type="number" name="dato" id="Radio1" name="Radio1" value="10">
-                <input list="unidades_radioEngrannaje" name="unidades"  placeholder="Unidades" id="Radio1">
+                <input list="unidades_radioEngrannaje" name="unidades"  placeholder="Unidades" id="RadioEngranaje1">
                 <datalist id="unidades_radioEngrannaje">
                     <option value="mm">
                     <option value="cm">
@@ -202,7 +204,26 @@
         
             </div>
 
-    <button class="body1"  type="button">calcular</button>
+            <div class="sectionData">
+
+                <label class="body2" for="RadioLlantas">radioDeLasLlantas:</label>
+                <input type="number" name="dato" id="RadioLlantas" name="RadioLlantas" value="10">
+                <input list="unidades_radioLlantas" name="unidades"  placeholder="Unidades" id="RadioLlantas1">
+                <datalist id="unidades_radioLlantas">
+                    <option value="mm">
+                    <option value="cm">
+                    <option value="dm">
+                    <option value="m">
+                    <option value="dam">
+                    <option value="hm">
+                    <option value="km">
+            </datalist>
+        
+            </div>
+            <p id="ResultadoREngranaje" class="body2"></p>
+
+
+    <button class="body1" id="MostrarRadio" type="button">calcular</button>
         </form>
         </details>
 
