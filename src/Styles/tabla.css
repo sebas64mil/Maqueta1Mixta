@@ -1,0 +1,61 @@
+.section_price{
+    background-color: var(--color-primary-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section_price .title{
+
+    text-align: center;
+    padding:0%;
+    color: var(--color-Secondary-900);
+
+}
+.section_price table:has(thead+tbody){
+border-collapse: collapse;
+border: 2px solid var(--color-Secondary-900);
+padding: 10px;
+border-radius: 10px;
+
+
+
+}
+tbody,thead,tr,td{
+    border-collapse: collapse;
+border: 2px solid var(--color-Secondary-900);
+color: var(--color-Secondary-900);
+}
+
+td{
+    padding: 20px ;
+}
+
+.section_price .Contenedor_price{
+    width: fit-content;
+    padding: 20px;
+    box-shadow: var(--E2);
+    margin: 5px 0px 20px 0px;
+    border-radius: 8px;
+}
+
+.section_price button[type="button"]{
+    border-radius: 8px;
+    border-style: solid;
+    border-color: var(--color-Secondary-50);
+    overflow: hidden;
+    margin: var(--spacing-xs) 0%;
+    align-self: center;
+    background-color: var(--color-primary-800);
+    color: var(--color-Secondary-50);
+}
+
+input{
+    border-radius: 8px;
+    border-color: var(--color-primary-900);
+    border-style: solid;
+    min-width: 50px;
+    height: 30px;
+    margin: 0% var(--spacing-2xs);
+}

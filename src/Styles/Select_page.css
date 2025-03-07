@@ -32,3 +32,7 @@ box-shadow: var(--E1);
     padding: var(--spacing-5xl) 0%;
 
 }
+
+.Select_page a{
+    text-decoration: none;
+}
