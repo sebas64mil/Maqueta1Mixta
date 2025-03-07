@@ -38,6 +38,9 @@ td{
     box-shadow: var(--E2);
     margin: 5px 0px 20px 0px;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .section_price button[type="button"]{
@@ -49,6 +52,8 @@ td{
     align-self: center;
     background-color: var(--color-primary-800);
     color: var(--color-Secondary-50);
+    
+
 }
 
 input{
