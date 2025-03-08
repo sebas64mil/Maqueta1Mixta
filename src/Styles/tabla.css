@@ -67,4 +67,5 @@ input{
 
 #resultado{
     text-align: center;
+    color: var(--color-Secondary-900);
 }
