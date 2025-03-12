@@ -249,8 +249,8 @@ document.getElementById("mostrarUnidades1").addEventListener('click', () => {
     let AceleracionFinal=Math.ceil(Aceleracion(MasaFinal,FuerzaMotor,coeficienteFriccion,gravedadFinal));
     document.getElementById("gravedadPlaneta").innerHTML = `${gravedadFinal} m/s<sup>2</sup>`;
 
-    if ( MasaFinal <= 0 || FuerzaMotor <= 0 || coeficienteFriccion <= 0) {
-        document.getElementById("ResultadoAceleracion").innerHTML=`un dato esta es igual a 0 o negativo`;
+    if ( MasaFinal === 0) {
+        document.getElementById("ResultadoAceleracion").innerHTML=`La masa no puede ser 0`;
 
     }else if(AceleracionFinal<=0 ){
 
@@ -279,9 +279,9 @@ document.getElementById("MostrarRadio").addEventListener('click',()=>{
 
     document.getElementById("gravedadPlaneta2").innerHTML = `${gravedadFinal} m/s<sup>2</sup>`;
 
-    if ( MasaFinal<= 0 || gravedadFinal <= 0 || torquemotorFInal <=0 || radioLlantasFinal <= 0 || RadioEngranaje1Final <= 0 || coeficienteFriccion2 <= 0) {
+    if (  torquemotorFInal ===0 ) {
 
-        document.getElementById("ResultadoREngranaje").innerHTML=`un dato esta es igual a 0 o negativo`;
+        document.getElementById("ResultadoREngranaje").innerHTML=`el torque del motor no puede ser 0`;
 
     }else if(radioEngranaje2Final<=0){
         document.getElementById("ResultadoREngranaje").innerHTML=`no existe el radio del engranaje Trasero`;
